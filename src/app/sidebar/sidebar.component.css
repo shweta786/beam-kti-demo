@@ -1,0 +1,31 @@
+#sidebar{
+    height: 100%;
+    min-width: 120px;
+    max-width: 120px;
+    background: #0e2239;
+    position: fixed;
+    z-index: 1;
+}
+
+#sidebar .sidebar-header {
+    height: 80px;
+    padding: 14px 32px;
+    /* background:var(--logo-background); */
+    border-bottom: 1px solid #6c6f6f;
+}
+  
+#sidebar .sidebar-header img {
+    height: 50px;
+}
+.list-style{
+    margin-left: 5px;
+    margin-top: 10px;
+}
+   
+.sidebar-content-heading {
+    font-size: 11px;
+}
+
+li a{
+    color: white;
+}
