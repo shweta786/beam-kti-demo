@@ -1,0 +1,108 @@
+.custom-day {
+    text-align: center;
+    display: inline-block;
+    height: 1.7rem;
+    width: 2rem;
+    padding: 3px;
+  }
+  .custom-day.focused {
+    background-color: #e6e6e6;
+  }
+  .custom-day:hover{
+    background-color:#0e2239;
+    color: white;
+    border-radius: 40px;
+  }
+
+  .dropdown-toggle{
+    cursor: pointer;
+  }
+
+  .angle-down {
+    padding-left: 6rem;
+    color:gray;
+  }
+
+  .dropdown {
+    border: 1px solid #ced4da;
+    height: 30px;
+    width: 73%;
+  }
+  .custom-day.range  {
+    background-color:#0e2239;
+    color: white;
+  }
+  .custom-day.range.from, .custom-day.range.monday   {
+    border-radius: 40px 0px 0px 40px;
+  }
+
+  .custom-day.range.to, .custom-day.range.sunday ,.custom-day.selectTo{
+    border-radius: 0px 40px 40px 0px;
+  }
+
+  .custom-day.faded {
+    background-color:#0e2239;
+    color: white;
+    border-radius:0px;
+  }
+  .user .dropdown{
+    color:black;
+ 
+ }
+
+  .dropdown-menu{
+    padding:0px;
+    margin-right: -15em;
+    margin-top:15px;
+    background-color : white;
+    color:#787878;
+  }
+
+  .inline-row {
+    display: -webkit-box !important;
+  }
+
+  :host /deep/ .bg-light {
+    background-color: #eeeeee !important;
+    color: black;
+  }
+  :host /deep/  .btn-link {
+    color: unset !important;
+  }
+
+  :host /deep/ .ngb-dp-weekday {
+    color: black !important;;
+  }
+
+  .selector{
+  min-width: 250px;
+  padding: 47px 20px 10px 20px;
+  }
+
+  .button{
+    border-radius: .25rem;
+    width: 100px;
+    color:white
+  }
+ .apply{
+    background-color: #2db2fc;
+  }
+ .cancel{
+    margin-right: 10px;
+    background-color:unset;
+    border: none;
+    color:#2db2fc;
+  }
+
+  .form-control:disabled{
+    background-color: white;
+    color :#787878;
+  }
+
+  .btn-reset-position {
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+  }

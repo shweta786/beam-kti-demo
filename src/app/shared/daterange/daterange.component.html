@@ -1,0 +1,49 @@
+<div class="user">
+  <div class="dropdown input-group">
+    <span class="dropdown-toggle" id="dropdownMenuButton" (click)="toggle()" aria-haspopup="true" aria-expanded="false">
+      <!-- <span *ngIf="daterange.fromDate">Date Range:
+        <span class="value">{{getDate(daterange.fromDate) | date : 'MM/dd/yyyy'}} - {{getDate(daterange.toDate) | date
+          : 'MM/dd/yyyy'}}</span>
+        <span class="angle-down"></span>
+      </span>
+      <span *ngIf="!daterange.fromDate">Date Range
+        <span class="angle-down"></span>
+      </span> -->
+      <span style="font-size: 14px;color: #666666;padding-left: 8px;">Last 7 days: 9/15/2018- 9/21/2018</span>
+      <span class="angle-down"></span>
+    </span>
+    <div class="dropdown-menu dropdown-menu-right" [class.show]="show" aria-labelledby="dropdownMenuButton" style="border: 1px solid;">
+      <div class="inline-row">
+        <div class="column" style="border-right: 1px solid;">
+          <ngb-datepicker #dp (select)="onDateSelection($event)" [dayTemplate]="t" [displayMonths]="displayMonths"
+            [navigation]="navigation" [showWeekNumbers]="showWeekNumbers" style="border: none !important">
+          </ngb-datepicker>
+        </div>
+        <div class="column selector">
+          <h5 style="text-align: center;margin-top:-19px">
+            DATE RANGE
+          </h5>
+          <hr>
+          <div class="form-group">
+            <input type="text" class="form-control" disabled placeholder="Start Date" value="{{getDate(fromDate) | date : 'EEEE, MM/dd/yyyy'}}">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" disabled placeholder="End Date" value="{{getDate(toDate)  | date : 'EEEE, MM/dd/yyyy'}}">
+          </div>
+          <button type="button" class="btn button cancel" (click)="toggle();">Clear</button>
+          <button type="button" class="btn button apply" (click)="apply();">APPLY</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #t let-date="date" let-focused="focused">
+  <span class="custom-day" [class.focused]="focused" [class.range]="isFrom(date) ||isTo(date)||isInside(date)|| isHovered(date)"
+    [class.from]="isFrom(date)" [class.to]="isTo(date)" [class.sunday]="isSunday(date) && (isInside(date) || isHovered(date)) "
+    [class.monday]="isMonday(date) && (isInside(date) || isHovered(date))" [class.faded]="(isHovered(date) || isInside(date)) && (!isSunday(date) && !isMonday(date))"
+    [class.selectTo]=" (!isFrom(date) && !isInside(date) && !isHovered(date) && fromDate != null && toDate ==null)"
+    (mouseenter)="hoveredDate = date" (mouseleave)="hoveredDate = null">
+    {{ date.day }}
+  </span>
+</ng-template>

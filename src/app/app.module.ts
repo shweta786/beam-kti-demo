@@ -9,6 +9,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DateRangeModule } from './shared/daterange/daterange.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule.forRoot(),
     RouterModule.forRoot(routes),
     FormsModule,
-    HttpModule
+    HttpModule,
+    DateRangeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
