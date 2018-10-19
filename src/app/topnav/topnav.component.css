@@ -26,3 +26,11 @@
     margin-top: -1.5rem;
     color: gray;
 }
+
+.right-side{
+    background: #192c42;
+    margin-top: -21px;
+    margin-bottom: -21px;
+    text-align: right;
+    padding-top: 20px
+}
